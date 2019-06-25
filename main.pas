@@ -2803,6 +2803,12 @@ begin
           if cbStartTorrent.Checked then
             TorrentAction(id, 'torrent-start');
 
+          if cbStartSequential.Checked then
+             args:=TJSONObject.Create;
+             args.Add('sequential', integer(cbSequential.Checked) and 1);
+             TorrentAction(id, 'torrent-set', args);
+
+
           SelectTorrent(id, 2000);
 
           id:=0;

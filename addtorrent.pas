@@ -39,6 +39,7 @@ type
   { TAddTorrentForm }
 
   TAddTorrentForm = class(TBaseForm)
+    cbStartSequential: TCheckBox;
     DelButton: TBitBtn;
     btSelectAll: TButton;
     btSelectNone: TButton;
